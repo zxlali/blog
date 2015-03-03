@@ -4,7 +4,7 @@ permalink: /:year/:month/:day/:title.html
 name: "rusty shutter"
 markdown: rdiscount
 
-author: "wayne"
+author: "zxl"
 atom-baseurl: "http://lhzhang.com"
 disqus: "gopherwood"
 
