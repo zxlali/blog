@@ -1,0 +1,15 @@
+#!/bin/bash
+#program:
+#       This is shows the user's choice
+
+PATH=$PATH:~/bin
+export PATH
+
+read -p "Please input (Y/N) " yn
+if [ "$yn"== "Y" ] || [ "$yn"=="y" ]; then 
+		echo "ok,continue"
+elif [ "$yn"== "N" ] || [ "$yn"=="n" ]; then 
+		echo "oh, interrupt~!"
+else 
+		echo "I don't know what your choice is"
+fi
