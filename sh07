@@ -1,0 +1,13 @@
+#!/bin/bash
+#program:
+#      using for ...loop to check system's infomation  
+# 2015.3.16 zxl 
+
+PATH=$PATH:~/bin
+export PATH
+users=$(cut -d ':' -f1 /etc/passwd)
+for username in $users
+do 
+		id $username
+        finger $username
+done

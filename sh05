@@ -1,0 +1,28 @@
+#!/bin/bash
+#program:
+#      use function to repeat information  
+# 2015.3.16 zxl 
+
+PATH=$PATH:~/bin
+export PATH
+
+echo "this program will print your selection! "
+#read -p "input your choice : " choice
+#case $choice in 
+function printit() {
+		echo "your choice is $1"
+}
+case $1 in
+		"one")
+				printit 1
+				;;
+		"two")
+				printit 2
+				;;
+		"three")
+				printit 3
+				;;
+		*)
+				echo "Usage $0 {one|two|three}" 
+				;;
+esac

@@ -1,0 +1,24 @@
+#!/bin/bash
+#program:
+#      user input dir name, I find the permission of files  
+# 2015.3.16 zxl 
+
+PATH=$PATH:~/bin
+export PATH
+
+read -p "please input the dir name: " dir
+if [ "$dir" == "" -o ! -d "$dir" ]; then 
+		echo "the $dir is not exist in your system."
+		exit 1
+fi
+
+filelist=$(ls $dir)
+for filename in $filelist
+do
+		echo "$filename"
+		perm=""
+	    [ -r "$dir/$filename" ] && perm="$perm readable"
+		[ -w "$dir/$filename" ] && perm="$perm writeable"
+		[ -x "$dir/$filename" ] && perm="$perm excuteable"
+        echo "the file $dir/$filename's permission is $perm "
+done
