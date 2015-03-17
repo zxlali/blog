@@ -1,0 +1,23 @@
+#!/bin/bash
+#program:
+#       you input your demobilization date , I calculate how many days before you demobilize.
+#2015.3.16 zxl 
+
+PATH=$PATH:~/bin
+export PATH
+
+dir="/Users/apsara/logical"
+if [ ! -e "$dir" ]; then
+		$(touch "$dir")
+		exit 1
+elif [ -f "$dir" ]; then
+		$(rm -rf "$dir")
+		$(mkdir "logical")
+		exit 1
+elif [ -d "$dir" ]; then
+		$(rm -rf "$dir")
+		exit 1
+fi
+echo "sucess "
+
+

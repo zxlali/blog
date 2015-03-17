@@ -1,0 +1,9 @@
+#!/bin/bash
+#program:
+#      try to print who i am and pwd  
+# 2015.3.16 zxl 
+
+PATH=$PATH:~/bin
+export PATH
+echo $(whoami)
+echo $(pwd)
